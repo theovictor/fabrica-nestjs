@@ -22,9 +22,9 @@ export class MessagesService {
   }
 
   async findById(id: number) {
-    const message = this.messages.find((msg) => message.id === id);
+    const message = this.messages.find((msg) => msg.id === id);
     if (!message) {
-      throw Error(`Mensagem com o ID ${id} não encontrada`);
+      throw Error(`Mensagem com o ID '${id}' não encontrada`);
     }
     return message;
   }
